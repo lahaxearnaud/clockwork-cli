@@ -15,7 +15,7 @@ class LogFileScanner
     {
         $files = array();
         foreach ($this->dirs as $dir) {
-            $dir .= '/app/storage/clockwork';
+            $dir .= '/storage/clockwork';
             if (is_dir($dir)) foreach (new \DirectoryIterator($dir) as $fileInfo) {
                 if ($fileInfo->isFile() && $fileInfo->getExtension() == 'json') {
                     $timestamp = (float) $fileInfo->getFilename();
