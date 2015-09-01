@@ -13,15 +13,20 @@ Clockwork-cli
 
 * Install clockwork-cli via composer for your project:
 ```
-composer require ptrofimov/clockwork-cli:*
+composer require lahaxearnaud/clockwork-cli:*
 ```
 * Or install clockwork-cli globally:
 ```
-composer global require ptrofimov/clockwork-cli:*
+composer global require lahaxearnaud/clockwork-cli:*
 ```
-* You could also register Artisan command
+* For Laravel 5.1 or Lumen you can register Artisan command
+
+In app/Console/Kernel.php
 ```
-Artisan::add(new Clockwork\Cli\Laravel\Command);
+    protected $commands = [
+      // ...
+      \Clockwork\Cli\Laravel\Command::class
+    ];
 ```
 
 ## Usage
